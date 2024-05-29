@@ -1,0 +1,17 @@
+.navbar .navbar-brand img {
+    width: 140px;
+}
+@media (max-width: 767px) {
+    .navbar .navbar-toggler {
+        padding: 0;
+        border: 0;
+    }
+    .navbar .navbar-toggler:focus {
+        box-shadow: none;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10% !important;
+    }
+}
