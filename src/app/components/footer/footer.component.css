@@ -1,0 +1,11 @@
+.footer {
+    color: #fff;
+}
+.footer .footer-logo img {
+    width: 200px;
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10% !important;
+    }
+}
