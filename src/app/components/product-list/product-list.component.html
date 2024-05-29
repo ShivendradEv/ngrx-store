@@ -1,0 +1,55 @@
+<div class="product-list">
+    <div class="row d-flex align-items-center">
+        <div class="col-12">
+            <h1 class="title m-0">{{ title }}</h1>
+        </div>
+    </div>
+
+    <!-- <div *ngIf="isLoading">
+        <div class="row">
+            <div class="col-12">
+                <ul class="skeleton-loader">
+                    <li *ngFor="let i of Arr(num).fill(1)">
+                        <div class="image"></div>
+                        <div class="title"></div>
+                        <div class="description"></div>
+                        <div class="price"></div>
+                        <div class="button"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="product-list-inner" *ngIf="products$ | async as products">
+        <!-- <div *ngIf="isInnerLoader">
+            <div class="inner-loader">
+                <span class="loader"></span>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-12">
+                <ul>
+                    <li *ngFor="let item of products" class="prd-card">
+                        <div class="image"><img src="{{ item.thumbnail }}"></div>
+                        <div class="prd-card-content">
+                            <h2 class="title">{{ item.title }}</h2>
+                            <p class="description">{{ item.description }}</p>
+                            <p class="price">{{ item.price | currency: 'INR' }}</p>
+                            <button type="button" class="btn btn-danger">View Product</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- <div class="error-msg" *ngIf="error">
+        <p class="error-message">{{ error }}</p>
+    </div> -->
+</div>
+
+
+
+<!-- <button class="btn btn-primary" (click)="onNext()">Next</button> -->
