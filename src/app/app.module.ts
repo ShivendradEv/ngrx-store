@@ -15,9 +15,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+
 const appRoute: Routes = [
   {path: "", component: HomeComponent},
   {path: "product-list/:category", component: ProductListComponent},
+  {path: "product-details/:id", component: ProductDetailsComponent},
 ]
 
 @NgModule({
@@ -26,13 +31,16 @@ const appRoute: Routes = [
     ProductListComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoute),
+    BrowserAnimationsModule,
+    CarouselModule 
   ],
   providers: [
     ProductListService,

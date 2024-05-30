@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+.product-list .owl-theme .owl-nav {
+    margin: 0;
+    position: absolute;
+    top: -43px;
+    right: 0;
+}
+.product-list .owl-theme .owl-nav .owl-next,
+.product-list .owl-theme .owl-nav .owl-prev {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+    line-height: 37px;
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    font-size: 30px;
+    text-align: center;
+}
+.product-list .owl-theme .owl-nav .owl-next:hover,
+.product-list .owl-theme .owl-nav .owl-prev:hover {
+    background: #bb2d3b;
+}
+.product-list .owl-theme .owl-nav .owl-prev {
+    margin-right: 10px;
+}
+.product-list .owl-theme .owl-nav {
+    margin: 0;
+    position: absolute;
+    top: -37px;
+    right: -8px;
+    transform: scale(0.8);
+}
+@media (max-width: 480px) {
+    .product-list .owl-theme .owl-nav {
+        top: -37px;
+        right: -8px;
+        transform: scale(0.8);
+    }
+}
