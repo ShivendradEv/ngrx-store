@@ -62,8 +62,7 @@ ul {
     width: 120px;
 }
 
-.product-list .error-msg,
-.product-list .product-list-inner {
+.product-list .error-msg {
     margin-top: 40px;
 }
 
@@ -82,7 +81,8 @@ ul {
     padding: 20px 0 20px 20px;
     margin-right: 20px;
 }
-.product-list .product-list-inner li h2.title {
+
+.product-list .product-list-inner h2.title {
     font-size: 22px;
     color: #585858;
     text-overflow: ellipsis;
@@ -90,16 +90,16 @@ ul {
     white-space: nowrap;
     margin: 0 0 12px;
 }
-.product-list .product-list-inner li p.description {
+.product-list .product-list-inner p.description {
     font-size: 14px;
     line-height: 1.2;
     min-height: 115px;
 }
-.product-list .product-list-inner li p.price {
+.product-list .product-list-inner p.price {
     font-size: 16px;
     font-weight: 700;
 }
-.product-list .product-list-inner li img {
+.product-list .product-list-inner img {
     width: 100%;
 }
 

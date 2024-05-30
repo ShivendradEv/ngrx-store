@@ -13,4 +13,6 @@ export class HomeComponent {
 
   title2 = 'Laptops';
   category2 = 'laptops';
+
+  isSlider = true;
 }

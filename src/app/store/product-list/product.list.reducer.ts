@@ -3,12 +3,14 @@ import * as ProductListActions from './product.list.action';
 
 export interface ProductState {
     products: any[],
-    error: string | null
+    error: string | null,
+    loading: boolean
 }
 
 export const initialProductListState: ProductState = {
     products: [],
-    error: null
+    error: null,
+    loading: true
 }
 
 export const productReducer = createReducer(
@@ -16,10 +18,12 @@ export const productReducer = createReducer(
     on(ProductListActions.loadProductsSuccess, (state, {products})=> ({
         ...state,
         products,
-        error: null
+        error: null,
+        loading: false
     })),
     on(ProductListActions.loadProductsFailure, (state, {error})=> ({
         ...state,
-        error: error
+        error: error,
+        loading: false
     }))
 )
